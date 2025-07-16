@@ -24,4 +24,6 @@
 /* Blackbold */
 @include font-face($font-name, "../fonts/raleway/Raleway-Black-900", 900, "normal", woff2 woff ttf);
 
-@include font-face('Krona One', "../fonts/krona-one/KronaOne-Regular", 900, "normal", ttf);
+@include font-face($font-krona, "../fonts/krona-one/KronaOne-Regular", 900, "normal", ttf);
+
+@include font-face($font-sussie, "../fonts/sussie/Suisse_Intl_Regular", 900, "normal", ttf);
