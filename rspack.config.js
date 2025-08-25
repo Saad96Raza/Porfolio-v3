@@ -16,7 +16,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].bundle.js',
-    publicPath: "/Porfolio-v3/" ,
     clean: true,
   },
 
