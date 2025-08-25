@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route, Link } from "react-router-dom";
+import {   Routes, Route, Link  } from "react-router-dom";
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import PrimaryButton from '../childrens/mixins/PrimaryButton';
@@ -24,9 +24,7 @@ const Header = () => {
                   <li><Link className="link" to="/portfolio">portfolio</Link></li>
                   <li><Link className="link" to="/work">work</Link></li>
                   <li><Link className="link" to="/contact">contact  </Link></li>
-                  <li> <PrimaryButton text="resume" styleName='primary-button' link="https://docs.google.com/document/d/1KfxL_3wmFDmweumXCDoPXOMvKcICAS9enJzgZ_D0PqM/edit?usp=sharing" /></li>
-                 
-
+                  <li> <PrimaryButton text="resume" styleName='primary-button' link={process.env.RESUME} /></li>
               </ul>              
               <div className='switcher flex justify-center items-center'>
                 <Switcher/>
@@ -34,7 +32,7 @@ const Header = () => {
           </div>          
       </header>
       <Line/>
-     <Routes>
+     <Routes basename="/Porfolio-v3">
         <Route path="/"  element={<Home />} /> 
         <Route path="/contact" element={<Contact />} />
     </Routes>
