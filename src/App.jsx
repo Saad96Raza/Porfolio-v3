@@ -1,10 +1,12 @@
 import React from 'react'
-import Home from './components/pages/Home'
+import Header from './components/partials/Header'
+import Footer from './components/partials/Footer'
 
 const App = () => {
   return (
     <React.Fragment>
-      <Home/>
+      <Header/>
+      <Footer/>
     </React.Fragment>
   )
 }

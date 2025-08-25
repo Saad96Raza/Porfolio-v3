@@ -48,9 +48,9 @@ html {
 /* Links decoration */
 a {
     text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
+    // &:hover {
+    //     text-decoration: underline;
+    // }
 }
 
 /* Remove default list styling */
@@ -64,6 +64,8 @@ body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     background:ss-var($colors,neutral,'black');
+    text-transform: capitalize;
+    font-family: $font-sussie;
 }
 
 img,
@@ -77,4 +79,11 @@ button,
 textarea,
 select {
     font: inherit;
+}
+
+
+section,
+header,
+footer{
+    @apply px-[1rem] md:px-[2rem];
 }

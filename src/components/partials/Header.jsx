@@ -1,0 +1,46 @@
+import React from 'react'
+import { Routes, Route, Link } from "react-router-dom";
+import Home from '../pages/Home';
+import Contact from '../pages/Contact';
+import PrimaryButton from '../childrens/mixins/PrimaryButton';
+
+
+import Line from '../childrens/mixins/Line'
+import Switcher from '../childrens/mixins/Switcher'
+import Logo from '../../media/logo.jpg'
+
+const Header = () => {
+
+
+  return (
+    <React.Fragment>
+      <header className='header py-[1.875rem] flex container'>
+          <div className='logo'>
+             <img src={Logo} alt='' />
+          </div>
+          <div className='nav flex gap-[4.597rem] ml-auto'>
+              <ul className='hidden md:flex justify-center items-center gap-[3.597rem]  w-fit'>
+                  <li><Link className="link" to="/">home</Link></li>
+                  <li><Link className="link" to="/portfolio">portfolio</Link></li>
+                  <li><Link className="link" to="/work">work</Link></li>
+                  <li><Link className="link" to="/contact">contact  </Link></li>
+                  <li> <PrimaryButton text="resume" styleName='primary-button' link="https://docs.google.com/document/d/1KfxL_3wmFDmweumXCDoPXOMvKcICAS9enJzgZ_D0PqM/edit?usp=sharing" /></li>
+                 
+
+              </ul>              
+              <div className='switcher flex justify-center items-center'>
+                <Switcher/>
+             </div>
+          </div>          
+      </header>
+      <Line/>
+     <Routes>
+        <Route path="/"  element={<Home />} /> 
+        <Route path="/contact" element={<Contact />} />
+    </Routes>
+          
+    </React.Fragment>
+  )
+}
+
+export default Header

@@ -77,13 +77,8 @@
     .icon-#{$name}::before {
       content: $code;
       font-family: 'iconmoon';
-
+      
     }
   }
   
 
-.sm-btn-text{
-    &::before {
-        font-family: "iconmoon";
-    }
-}

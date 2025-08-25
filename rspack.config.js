@@ -1,6 +1,8 @@
 const path = require('path');
 const rspack = require('@rspack/core');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const dotenv = require('dotenv');
+dotenv.config({ override: true });
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -102,6 +104,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html', // your HTML template
       inject: 'body',
+    }),
+    new rspack.DefinePlugin({
+      'process.env.FEATURES_API': JSON.stringify(process.env.FEATURES_API),
+      'process.env.HOME_SLIDER_API': JSON.stringify(process.env.HOME_SLIDER_API),
+      'process.env.CONTACT_FORM_FIELDS': JSON.stringify(process.env.CONTACT_FORM_FIELDS),
     }),
   ],
 };
