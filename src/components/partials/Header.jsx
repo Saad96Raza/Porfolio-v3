@@ -20,7 +20,7 @@ const Header = () => {
           </div>
           <div className='nav flex gap-[4.597rem] ml-auto'>
               <ul className='hidden md:flex justify-center items-center gap-[3.597rem]  w-fit'>
-                  <li><Link className="link" to="/Porfolio-v3">home</Link></li>
+                  <li><Link className="link" to="/">home</Link></li>
                   <li><Link className="link" to="/portfolio">portfolio</Link></li>
                   <li><Link className="link" to="/work">work</Link></li>
                   <li><Link className="link" to="/contact">contact  </Link></li>
@@ -32,8 +32,8 @@ const Header = () => {
           </div>          
       </header>
       <Line/>
-     <Routes >
-        <Route path="/Porfolio-v3"  element={<Home />} /> 
+     <Routes basename="/Porfolio-v3">
+        <Route path="/"  element={<Home />} /> 
         <Route path="/contact" element={<Contact />} />
     </Routes>
           
