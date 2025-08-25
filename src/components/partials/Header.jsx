@@ -1,5 +1,5 @@
 import React from 'react'
-import {   Routes, Route, Link  } from "react-router-dom";
+import { Routes, Route, Link  } from "react-router-dom";
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
 import PrimaryButton from '../childrens/mixins/PrimaryButton';
@@ -20,7 +20,7 @@ const Header = () => {
           </div>
           <div className='nav flex gap-[4.597rem] ml-auto'>
               <ul className='hidden md:flex justify-center items-center gap-[3.597rem]  w-fit'>
-                  <li><Link className="link" to="/">home</Link></li>
+                  <li><Link className="link" to="/Porfolio-v3">home</Link></li>
                   <li><Link className="link" to="/portfolio">portfolio</Link></li>
                   <li><Link className="link" to="/work">work</Link></li>
                   <li><Link className="link" to="/contact">contact  </Link></li>
@@ -32,8 +32,8 @@ const Header = () => {
           </div>          
       </header>
       <Line/>
-     <Routes basename="/Porfolio-v3">
-        <Route path="/"  element={<Home />} /> 
+     <Routes >
+        <Route path="/Porfolio-v3"  element={<Home />} /> 
         <Route path="/contact" element={<Contact />} />
     </Routes>
           
